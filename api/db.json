@@ -1,0 +1,113 @@
+{
+    "fields": [
+        {
+            "id": 1,
+            "name": "user_id",
+            "description": "Contains the primary key used to identify a user of the system",
+            "type": "Contains the primary key used to identify a user of the system",
+            "sensitivity": "This is personal data, and cannot be distributed in raw form",
+        },
+        {
+            "id": 2,
+            "name": "item_id",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper eros",
+            "type": "quis ligula venenatis, eget blandit ante vestibulum",
+            "sensitivity": " Donec fringilla dolor ac iaculis rhoncus"
+        },
+        {
+            "id": 3,
+            "name": "user_email",
+            "description": "Pellentesque blandit scelerisque velit at congue. ",
+            "type": "Aliquam consequat, leo in cursus tincidunt",
+            "sensitivity": "lectus eros venenatis orci, at fringilla"
+        },
+        {
+            "id": 4,
+            "name": "item_views",
+            "description": " Praesent placerat libero in felis dignissim",
+            "type": "a semper dolor pretium",
+            "sensitivity": "Morbi eget purus volutpat, porttitor neque"
+        },
+        {
+            "id": 5,
+            "name": "item_favorites",
+            "description": "Praesent malesuada, nisl eu malesuada",
+            "type": " elementum, nunc nisl malesuada nulla",
+            "sensitivity": "ut lacinia odio urna ac est"
+        }
+    ],
+    "requests": [
+        {
+            "id": 1,
+            "date": "2017/09/21",
+            "reason": "Data science algorithms",
+            "status": 1
+        },
+        {
+            "id": 2,
+            "date": "2017/08/13",
+            "reason": "Stakeholder dashboards",
+            "status": 2
+        },
+        {
+            "id": 3,
+            "date": "2017/07/03",
+            "reason": "Email blast",
+            "status": 3
+        },
+        {
+            "id": 4,
+            "date": "2017/02/09",
+            "reason": "Investigation",
+            "status": 2
+        },
+        {
+            "id": 5,
+            "date": "2017/09/21",
+            "reason": "Data science algorithms",
+            "status": 1
+        },
+        {
+            "id": 6,
+            "date": "2017/08/13",
+            "reason": "Stakeholder dashboards",
+            "status": 2
+        },
+        {
+            "id": 7,
+            "date": "2017/09/21",
+            "reason": "Data science algorithms",
+            "status": 3
+        },
+        {
+            "id": 8,
+            "date": "2017/09/21",
+            "reason": "Data science algorithms",
+            "status": 1
+        },
+        {
+            "id": 9,
+            "date": "2017/09/21",
+            "reason": "Data science algorithms",
+            "status": 2
+        },
+        {
+            "id": 10,
+            "date": "2017/09/21",
+            "reason": "Data science algorithms",
+            "status": 3
+        },
+        {
+            "id": 11,
+            "date": "2017/09/21",
+            "reason": "Data science algorithms",
+            "status": 1
+        },
+        {
+            "id": 12,
+            "date": "2017/09/21",
+            "reason": "Data science algorithms",
+            "status": 2
+        }
+    ]
+}
