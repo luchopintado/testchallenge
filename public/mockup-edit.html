@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Gate</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/icomoon.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand"><span>Data Gate</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Review</a></li>
+                    <li><a href="#">Request</a></li>
+                    <li><a href="#" class="active">Manage</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main">
+            <h2 class="section-title">Manage Data</h2>
+
+            <div class="sections">
+                <div class="sidebar-container">
+                    <div class="sidebar">
+                        <ul>
+                            <a href="#" class="active">user_id <span class="icon-chevron-right"></span></a>
+                            <a href="#">user_id <span class="icon-chevron-right"></span></a>
+                            <a href="#">user_id <span class="icon-chevron-right"></span></a>
+                            <a href="#">user_id <span class="icon-chevron-right"></span></a>
+                            <a href="#">user_id <span class="icon-chevron-right"></span></a>
+                        </ul>
+                    </div>
+
+                    <div class="margin">
+                        <button type="button" class="btn btn-outline"><span class="icon-add"></span> Add key</button>
+                    </div>
+                </div>
+                <div class="main-container">
+                    <div class="margin-large">
+
+                        <div class="field-container relative">
+                            <div class="actions">
+                                <a href="#" class="btn btn-primary"><span class="icon-save"></span> Save</a>
+                            </div>
+                            <div class="content">
+                                <form>
+                                    <div class="form-control half">
+                                        <label>Key Name</label>
+                                        <div class="control">
+                                            <input class="input" type="text" value="user_id" name="keyName" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label>Description</label>
+                                        <div class="control">
+                                            <textarea class="textarea" rows="4" name="description">Contains de primary key used to identify a user of the system</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label>Type</label>
+                                        <div class="control">
+                                            <div class="select">
+                                                <select name="type">
+                                                    <option>integer</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label>
+                                            <input type="checkbox" name="personalData" checked />
+                                            Is this personal data?
+                                        </label>
+                                    </div>
+                                </form>
+
+                                <div class="panel">
+                                    <div class="panel-title">
+                                        <h5>Possible values</h5>
+                                    </div>
+                                    <div class="panel-body">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>VALUE</th>
+                                                    <th>DESCRIPTION</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>null</td>
+                                                    <td>Value when user is not found</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><em>{integer}</em></td>
+                                                    <td>Value when user is not found</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <br />
+                                        <a href="#" class="btn btn-outline"><span class="icon-add"></span> Add possible value</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

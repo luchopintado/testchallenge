@@ -1,0 +1,364 @@
+/*
+    COLORS:
+    green: #798900
+    red: #bf0000
+    lightgrey: #e3e3e3
+*/
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+em {
+    font-weight: bold;
+}
+
+/* Utilidades  */
+
+.container {
+    width: 1340px;
+    margin: auto;
+}
+.main-container {
+    border: 1px solid #e3e3e3;
+}
+.relative {
+    position: relative;
+}
+.margin {
+    margin: 1em;
+}
+.margin-large {
+    margin: 2em;
+}
+
+
+/* Botones */
+
+.btn {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    padding: .75em 1em;
+    color: #fff;
+}
+.btn-primary {
+    background-color: #798900;
+}
+.btn-outline {
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+}
+.btn > span[class^="icon"] {
+    margin-right: 0.5em;
+}
+
+
+/* INPUT ELEMENTS */
+
+.input, .textarea, select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding-bottom: calc(.375em - 1px);
+    padding-left: calc(.625em - 1px);
+    padding-right: calc(.625em - 1px);
+    padding-top: calc(.375em - 1px);
+    position: relative;
+    vertical-align: top;
+}
+.input, .textarea {
+    box-shadow: 1px 1px 2px rgba(10,10,10,.32);
+    max-width: 100%;
+    width: 100%;
+}
+.input, .select select, .textarea {
+    background-color: #fff;
+    border-color: #fafafa;
+    border-radius: 2px;
+    color: #363636;
+}
+.select {
+    box-shadow: 1px 1px 2px rgba(10,10,10,.32);
+    display: inline-block;
+    max-width: 100%;
+    position: relative;
+    vertical-align: top;
+}
+.select select {
+    padding-right: 2.5em;
+    cursor: pointer;
+    display: block;
+    font-size: 1em;
+    max-width: 100%;
+    outline: 0;
+}
+.select::after {
+    right: 1.125em;
+    z-index: 4;
+    border: 3px solid #333;
+    border-radius: 2px;
+    border-right: 0;
+    border-top: 0;
+    content: " ";
+    display: block;
+    height: .5em;
+    margin-top: -.4375em;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    width: .5em;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.32em;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    border-bottom: 2px solid #e3e3e3;
+}
+header .brand {
+    justify-content: flex-start;
+    align-items: stretch;
+    display: flex;
+    flex-shrink: 0;
+}
+header .brand span {
+    font-weight: 300;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 1em;
+}
+header nav {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+
+/* NAV  */
+
+nav ul{
+    justify-content: flex-end;
+    display: flex;
+}
+nav ul li{
+    display: inline;
+}
+nav a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: #798900;
+    font-size: 1.2em;
+}
+nav a.active {
+    color: #fff;
+    background-color: #798900;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    background-color: #000;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.sidebar a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    position: relative;
+}
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #798900;
+}
+.sidebar a:hover>span,
+.sidebar a.active>span {
+    display: block;
+}
+.sidebar a>span {
+    position: absolute;
+    top: 1.2em;
+    right: 1.2em;
+    display: none;
+}
+
+
+/* SECTIONS */
+
+.sections {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.section-title {
+    border-bottom: 1px solid #e3e3e3;
+    font-size: 3em;
+    margin: .5em;
+    padding-bottom: .75em;
+}
+.section-margin {
+    margin-left: 1.65em;
+    margin-right: 1.65em;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.section {
+    display: block;
+}
+
+
+/* FIELD CONTAINER*/
+
+.field-container {
+    display: block;
+}
+.field-container .header{
+    display: flex;
+    margin-bottom: 2em;
+}
+.field-container .header h4.title {
+    font-size: 2em;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-shrink: 0;
+}
+.field-container .header div {
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.field-container .actions {
+    position: absolute;
+    top: 2em;
+    right: 0;
+}
+.field-container .item {
+    margin-bottom: 2em;
+}
+.field-container .item h5{
+    font-weight: normal;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+.field-container .item p{
+    font-size: 1em;
+}
+
+
+/* REQUESTS CONTAINER */
+.requests-container {
+    margin: 2em 5em;
+}
+
+/* Panel */
+.panel .panel-title {
+    background-color: #798900;
+    padding: 1em;
+}
+.panel .panel-title h5 {
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.panel .panel-body {
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+
+/* TAB */
+.tab .tab-header {
+    margin-bottom: 1em;
+    border-bottom: 1px solid #e3e3e3;
+}
+.tab .tab-header a {
+    padding-bottom: 0.5em;
+    display: inline-block;
+    min-width: 8em;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+.tab .tab-header a:hover,
+.tab .tab-header a.active {
+    border-bottom: 4px solid #000;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    margin-bottom: 2em;
+}
+table thead th,
+table tbody td {
+    padding: 1em;
+    text-align: left;
+}
+table thead th {
+    font-size: 1.1em;
+}
+
+
+/* FORM */
+form {
+    margin-bottom: 3em;
+}
+.form-control {
+    margin: 2em 0;
+}
+.form-control.half {
+    width: 50%;
+}
+
+/* CHIPS */
+.chip {
+    padding: .5em 1em;
+    font-size: .9em;
+    display: inline-block;
+    min-width: 4.5em;
+    color: #fff;
+    border-radius: .32em;
+    text-align: center;
+}
+.chip-pending {
+    background-color: #000;
+}
+.chip-approved {
+    background-color: #798900;
+}
+.chip-denied {
+    background-color: #bf0000;
+}
