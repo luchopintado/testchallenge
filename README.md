@@ -1,3 +1,5 @@
+## CODE CHALLENGE: DATA GATE
+
 El proyecto consta de dos partes:
 
 Un servidor que levantará un `API REST`, para las peticiones realizadas por la aplicacion cliente, y la aplicación cliente desarrollada en `React`.
@@ -12,14 +14,15 @@ Para ejecutar la aplicacion cliente, debemos situarnos en la raiz del proyecto y
 
 ### `yarn start`
 
-Esto nos abrirá la aplicación en el puesto 3000.
+Esto nos abrirá la aplicación en el puerto 3000.
 
 Adicionalmente puede consultar los comandos por defecto disponibles en la aplicacion en la siguiente documentacion de `create-react-app`
 
 Para revisar la cobertura de código, utilizaremos el comando
 ### `yarn coverage`
 
-
+  
+  
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
