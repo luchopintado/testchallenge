@@ -5,7 +5,7 @@
             "name": "user_id",
             "description": "Contains the primary key used to identify a user of the system",
             "type": "Contains the primary key used to identify a user of the system",
-            "sensitivity": "This is personal data, and cannot be distributed in raw form",
+            "sensitivity": "This is personal data, and cannot be distributed in raw form"
         },
         {
             "id": 2,
