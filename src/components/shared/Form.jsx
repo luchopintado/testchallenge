@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import Select from '../../components/shared/Select';
 
-const Form = ({ saveField }) => {
-    const [ name, setName ] = useState('');
-    const [ description, setDescription ] = useState('');
-    const [ type, setType ] = useState('');
-    const [ sensitivity, setSensitivity ] = useState(false);
+const Form = ({ field, saveField }) => {
+    const [ name, setName ] = useState(field.name);
+    const [ description, setDescription ] = useState(field.description);
+    const [ type, setType ] = useState(field.type);
+    const [ sensitivity, setSensitivity ] = useState(field.sensitivity);
 
     const handleSubmit = evt => {
         evt.preventDefault();
@@ -36,6 +37,7 @@ const Form = ({ saveField }) => {
                         className="input"
                         type="text"
                         name="name"
+                        value={name}
                         onChange={e => setName(e.target.value)}
                     />
                 </div>
@@ -48,6 +50,7 @@ const Form = ({ saveField }) => {
                         className="textarea"
                         rows="4"
                         name="description"
+                        value={description}
                         onChange={e => setDescription(e.target.value)}
                     ></textarea>
                 </div>
@@ -56,14 +59,7 @@ const Form = ({ saveField }) => {
             <div className="form-control">
                 <label>Type</label>
                 <div className="control">
-                    <div className="select">
-                        <select name="type" onChange={e => setType(e.target.value)}>
-                            <option value="">Seleccione</option>
-                            <option value="integer">integer</option>
-                            <option value="string">string</option>
-                            <option value="date">date</option>
-                        </select>
-                    </div>
+                    <Select values={['integer', 'string', 'date']} onChange={value => setType(value)} selectedValue={type} />
                 </div>
             </div>
 

@@ -1,6 +1,11 @@
 import React from 'react';
 
-const Sidebar = ({ links }) => {
+const Sidebar = ({ links, onClickLink }) => {
+    const handleClick = (evt, link) => {
+        evt.preventDefault();
+        onClickLink(link)
+    };
+
     return (
         <div className="sidebar">
             <ul>
@@ -11,6 +16,7 @@ const Sidebar = ({ links }) => {
                             key={`a-${index}`}
                             role="button"
                             className={link.active ? 'active' : ''}
+                            onClick={evt => { handleClick(evt, link) }}
                         >
                             {link.text} <span className="icon-chevron-right"></span>
                         </a>

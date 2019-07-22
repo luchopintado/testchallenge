@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 const routes = [
     {
         text: 'Review',
-        url: '/data/show',
+        url: '/',
     },
     {
         text: 'Request',
@@ -12,7 +12,7 @@ const routes = [
     },
     {
         text: 'Manage',
-        url: '/data/edit',
+        url: '/data/show',
     },
 ];
 

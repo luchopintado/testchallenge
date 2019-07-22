@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Table from '../shared/Table';
-import Panel from '../shared/Panel';
-import { connect } from 'react-redux';
-import { fetchRequests } from '../../actions/requests'
 import Tab from '../shared/Tab';
+import Panel from '../shared/Panel';
+import Table from '../shared/Table';
+
+import { fetchRequests } from '../../actions/requests'
 
 const headers = ['DATE', 'REASON', 'STATUS'];
 const fields = ['date', 'reason', 'status'];
