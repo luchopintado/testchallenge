@@ -1,2 +1,9 @@
-export { default as fields } from './fields';
-export { default as requests } from './requests';
+import { combineReducers } from 'redux';
+
+import fieldsReducer from './fields';
+import requestsReducer from './requests';
+
+export default combineReducers({
+    fields: fieldsReducer,
+    requests: requestsReducer,
+});
