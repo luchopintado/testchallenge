@@ -44,7 +44,7 @@ export default function reducer(state = initialState, action) {
             };
         }
         case UPDATE_FIELD_SUCCESS: {
-            const { data } = state;
+            const data = [...state.data];
             const field = action.payload;
             const index = data.findIndex(d => d.id === field.id);
 

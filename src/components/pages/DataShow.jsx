@@ -45,6 +45,7 @@ const DataShow = (props) => {
         console.log(field);
         props.updateField(field.id, field);
         setCurrentView(VIEW_SHOW);
+        setCurrentField(field);
     };
 
     return (
