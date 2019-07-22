@@ -48,6 +48,7 @@ em {
     font-size: 1em;
     padding: .75em 1em;
     color: #fff;
+    border: none;
 }
 .btn-primary {
     background-color: #798900;
