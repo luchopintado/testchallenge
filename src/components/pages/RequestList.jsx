@@ -1,70 +1,67 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { bindActionCreators } from 'redux';
+
 import Table from '../shared/Table';
 import Panel from '../shared/Panel';
+import { connect } from 'react-redux';
+import { fetchRequests } from '../../actions/requests'
+import Tab from '../shared/Tab';
 
 const headers = ['DATE', 'REASON', 'STATUS'];
 const fields = ['date', 'reason', 'status'];
-const items = [
-    {
-        id: 1,
-        date: 'Valor 1',
-        reason: 'Data Science algorithms',
-        status: 1
-    },
-    {
-        id: 2,
-        date: 'Valor 2',
-        reason: 'Data Science algorithms',
-        status: 2
-    },
-    {
-        id: 3,
-        date: 'Valor 3',
-        reason: 'Data Science algorithms',
-        status: 3
-    },
-    {
-        id: 4,
-        date: 'Valor 4',
-        reason: 'Data Science algorithms',
-        status: 1
-    },
-    {
-        id: 5,
-        date: 'Valor 5',
-        reason: 'Data Science algorithms',
-        status: 2
-    }
+const tabHeaders = [
+    { id: 0, text: 'All' },
+    { id: 1, text: 'Pending' },
+    { id: 2, text: 'Approved' },
+    { id: 3, text: 'Denied' },
 ];
+const filterData = (data, status) => {
+    return data.filter(item => {
+        if (status > 0) {
+            return item.status === status;
+        }
+        return true;
+    });
+};
 
-const RequestList = () => {
+const RequestList = (props) => {
+    const [tabHeader, setTabHeader] = useState(tabHeaders[0]);
+
+    useEffect(() => {
+        props.fetchRequests();
+    }, []);
+
+    const filteredData = filterData(props.data, tabHeader.id);
+
     return (
         <div className="main">
             <h2 className="section-title section-margin">Requests</h2>
 
             <div className="section">
                 <div className="requests-container">
-                    <div className="tab">
-                        <div className="tab-header">
-                            <a href="#" className="active">All</a>
-                            <a href="#">Pending</a>
-                            <a href="#">Approved</a>
-                            <a href="#">Denied</a>
-                        </div>
-                        <div className="tab-content">
-                            <Panel title="All requests">
-                                <Table
-                                    headers={headers}
-                                    fields={fields}
-                                    items={items}
-                                />
-                            </Panel>
-                        </div>
-                    </div>
+                    <Tab headers={tabHeaders} onChangeTab={tabHeader => setTabHeader(tabHeader)}>
+                        <Panel title={`${tabHeader.text} requests`}>
+                            <Table
+                                headers={headers}
+                                fields={fields}
+                                items={filteredData}
+                            />
+                        </Panel>
+                    </Tab>
                 </div>
             </div>
         </div>
     );
 };
 
-export default RequestList;
+const mapStateToProps = ({ requests }) => ({
+    ...requests
+});
+const mapDispatchToProps = dispatch => bindActionCreators({
+    fetchRequests,
+}, dispatch);
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(RequestList);
