@@ -10,10 +10,11 @@ const Form = ({ field, saveField }) => {
     const handleSubmit = evt => {
         evt.preventDefault();
         saveField({
+            ...field,
             name,
             description,
             type,
-            sensitivity
+            sensitivity,
         });
 
         setName('');

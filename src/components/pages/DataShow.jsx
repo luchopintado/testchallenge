@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import Sidebar from '../shared/Sidebar';
 
-import { fetchFields } from '../../actions/fields'
+import { fetchFields, updateField } from '../../actions/fields'
 import FieldContainer from './FieldContainer';
 import FormContainer from './FormContainer';
 
@@ -18,7 +18,7 @@ const createLinks = (fields, currentField) => {
         active: currentField ? field.id === currentField.id : false,
     }));
 };
-const saveField = () => {};
+
 const searchField = (data, fieldId) => {
     return data.find(d => d.id === fieldId);
 }
@@ -38,6 +38,13 @@ const DataShow = (props) => {
 
     const editField = () => {
         setCurrentView(VIEW_EDIT);
+    };
+
+    const saveField = (field) => {
+        console.log('save field');
+        console.log(field);
+        props.updateField(field.id, field);
+        setCurrentView(VIEW_SHOW);
     };
 
     return (
@@ -71,6 +78,7 @@ const mapStateToProps = ({ fields }) => ({
 });
 const mapDispatchToProps = dispatch => bindActionCreators({
     fetchFields,
+    updateField,
 }, dispatch);
 
 export default connect(
