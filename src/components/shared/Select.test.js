@@ -16,9 +16,6 @@ describe('Select', () => {
     });
 
     it('renders all options', () => {
-        // const values = ['uno', 'dos', 'tres'];
-        // const wrapper = mount(<Select values={values} /> );
-
         expect(wrapper.find('option')).toHaveLength(values.length + 1);
     });
 

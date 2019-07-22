@@ -41,8 +41,6 @@ const DataShow = (props) => {
     };
 
     const saveField = (field) => {
-        console.log('save field');
-        console.log(field);
         props.updateField(field.id, field);
         setCurrentView(VIEW_SHOW);
         setCurrentField(field);
