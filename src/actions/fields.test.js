@@ -19,7 +19,6 @@ describe('Action creators: Fields', () => {
             };
 
             await fetchFields()(dispatch, getState, services);
-            // console.log(dispatch.mock.calls);
 
             expect(dispatch.mock.calls).toEqual([
                 [{ type: FETCH_FIELDS_START, error: false }],

@@ -1,17 +1,17 @@
 import React from 'react';
 import Chip from './Chip';
 
-export const TableHead = ({ headers }) => {
-    return (
-        <thead>
-            <tr>
-                {
-                    headers.map((header, index) => <th key={`th-${index}`}>{header}</th>)
-                }
-            </tr>
-        </thead>
-    );
-}
+export const TableHead = ({ headers }) => (
+    <thead>
+        <tr>
+            {
+                headers.map((header, index) => (
+                    <th key={`th-${index}`}>{header}</th>
+                ))
+            }
+        </tr>
+    </thead>
+);
 
 export const TableBody = ({ fields, items }) => (
     <tbody>
