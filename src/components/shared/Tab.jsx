@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Tabs = () => {
+const Tabs = ({ headers, onChangeTab, children }) => {
+    const [current, setCurrent] = useState(0);
+    const handleChange = (evt, header) => {
+        evt.preventDefault();
+        setCurrent(header.id);
+        onChangeTab(header);
+    }
+
     return (
         <div className="tab">
             <div className="tab-header">
-                <a href="#" className="active">All</a>
-                <a href="#">Pending</a>
-                <a href="#">Approved</a>
-                <a href="#">Denied</a>
+                {
+                    headers.map((header, index) => {
+                        return (
+                            <a
+                                href="/"
+                                role="button"
+                                key={`tab-${index}`}
+                                onClick={evt => handleChange(evt, header)}
+                                className={current === index ? 'active' : ''}
+                            >
+                                {header.text}
+                            </a>
+                        );
+                    })
+                }
             </div>
             <div className="tab-content">
-                contenido
+                {children}
             </div>
         </div>
     );
