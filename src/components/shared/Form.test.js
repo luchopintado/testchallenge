@@ -3,6 +3,7 @@ import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import Form from './Form';
+import Select from './Select';
 
 configure({ adapter: new Adapter() });
 
@@ -10,7 +11,7 @@ describe('Form', () => {
     it('guarda los datos del field', () => {
         const saveField = jest.fn();
         const prevent = jest.fn();
-        const wrapper = shallow(<Form saveField={saveField} />);
+        const wrapper = shallow(<Form field={{}} saveField={saveField} />);
 
         wrapper
             .find('input')
@@ -23,9 +24,9 @@ describe('Form', () => {
             .simulate('change', { target: { value: 'descripcion' } });
 
         wrapper
-            .find('select')
+            .find(Select)
             .at(0)
-            .simulate('change', { target: { value: 'integer' } });
+            .simulate('change', 'integer');
 
         wrapper
             .find('input')
