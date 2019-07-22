@@ -4,36 +4,53 @@
             "id": 1,
             "name": "user_id",
             "description": "Contains the primary key used to identify a user of the system",
-            "type": "Contains the primary key used to identify a user of the system",
-            "sensitivity": "This is personal data, and cannot be distributed in raw form"
+            "type": "integer",
+            "sensitivity": true,
+            "possibleValues": [
+                {
+                    "id": 1,
+                    "value": "valor 1",
+                    "description": "Description del valor 1"
+                },
+                {
+                    "id": 2,
+                    "value": "valor 2",
+                    "description": "Description del valor 2"
+                },
+                {
+                    "id": 3,
+                    "value": "valor 3",
+                    "description": "Description del valor 3"
+                }
+            ]
         },
         {
             "id": 2,
             "name": "item_id",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper eros",
-            "type": "quis ligula venenatis, eget blandit ante vestibulum",
-            "sensitivity": " Donec fringilla dolor ac iaculis rhoncus"
+            "type": "integer",
+            "sensitivity": true
         },
         {
             "id": 3,
             "name": "user_email",
             "description": "Pellentesque blandit scelerisque velit at congue. ",
-            "type": "Aliquam consequat, leo in cursus tincidunt",
-            "sensitivity": "lectus eros venenatis orci, at fringilla"
+            "type": "string",
+            "sensitivity": false
         },
         {
             "id": 4,
             "name": "item_views",
             "description": " Praesent placerat libero in felis dignissim",
-            "type": "a semper dolor pretium",
-            "sensitivity": "Morbi eget purus volutpat, porttitor neque"
+            "type": "string",
+            "sensitivity": false
         },
         {
             "id": 5,
             "name": "item_favorites",
             "description": "Praesent malesuada, nisl eu malesuada",
-            "type": " elementum, nunc nisl malesuada nulla",
-            "sensitivity": "ut lacinia odio urna ac est"
+            "type": "string",
+            "sensitivity": false
         }
     ],
     "requests": [
