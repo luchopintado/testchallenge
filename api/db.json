@@ -1,130 +1,142 @@
 {
-    "fields": [
+  "fields": [
+    {
+      "id": 1,
+      "name": "user_id",
+      "description": "Contains the primary key used to identify a user of the system",
+      "type": "integer",
+      "sensitivity": true,
+      "possibleValues": [
         {
-            "id": 1,
-            "name": "user_id",
-            "description": "Contains the primary key used to identify a user of the system",
-            "type": "integer",
-            "sensitivity": true,
-            "possibleValues": [
-                {
-                    "id": 1,
-                    "value": "valor 1",
-                    "description": "Description del valor 1"
-                },
-                {
-                    "id": 2,
-                    "value": "valor 2",
-                    "description": "Description del valor 2"
-                },
-                {
-                    "id": 3,
-                    "value": "valor 3",
-                    "description": "Description del valor 3"
-                }
-            ]
+          "id": 1,
+          "value": "valor 1",
+          "description": "Description del valor 1"
         },
         {
-            "id": 2,
-            "name": "item_id",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper eros",
-            "type": "integer",
-            "sensitivity": true
+          "id": 2,
+          "value": "valor 2",
+          "description": "Description del valor 2"
         },
         {
-            "id": 3,
-            "name": "user_email",
-            "description": "Pellentesque blandit scelerisque velit at congue. ",
-            "type": "string",
-            "sensitivity": false
-        },
-        {
-            "id": 4,
-            "name": "item_views",
-            "description": " Praesent placerat libero in felis dignissim",
-            "type": "string",
-            "sensitivity": false
-        },
-        {
-            "id": 5,
-            "name": "item_favorites",
-            "description": "Praesent malesuada, nisl eu malesuada",
-            "type": "string",
-            "sensitivity": false
+          "id": 3,
+          "value": "valor 3",
+          "description": "Description del valor 3"
         }
-    ],
-    "requests": [
+      ]
+    },
+    {
+      "id": 2,
+      "name": "item_id",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper eros",
+      "type": "date",
+      "sensitivity": false,
+      "possibleValues": [
         {
-            "id": 1,
-            "date": "2017/09/21",
-            "reason": "Data science algorithms",
-            "status": 1
+          "id": 1,
+          "value": "valor 1",
+          "description": "descripcion 1"
         },
         {
-            "id": 2,
-            "date": "2017/08/13",
-            "reason": "Stakeholder dashboards",
-            "status": 2
-        },
-        {
-            "id": 3,
-            "date": "2017/07/03",
-            "reason": "Email blast",
-            "status": 3
-        },
-        {
-            "id": 4,
-            "date": "2017/02/09",
-            "reason": "Investigation",
-            "status": 2
-        },
-        {
-            "id": 5,
-            "date": "2017/09/21",
-            "reason": "Data science algorithms",
-            "status": 1
-        },
-        {
-            "id": 6,
-            "date": "2017/08/13",
-            "reason": "Stakeholder dashboards",
-            "status": 2
-        },
-        {
-            "id": 7,
-            "date": "2017/09/21",
-            "reason": "Data science algorithms",
-            "status": 3
-        },
-        {
-            "id": 8,
-            "date": "2017/09/21",
-            "reason": "Data science algorithms",
-            "status": 1
-        },
-        {
-            "id": 9,
-            "date": "2017/09/21",
-            "reason": "Data science algorithms",
-            "status": 2
-        },
-        {
-            "id": 10,
-            "date": "2017/09/21",
-            "reason": "Data science algorithms",
-            "status": 3
-        },
-        {
-            "id": 11,
-            "date": "2017/09/21",
-            "reason": "Data science algorithms",
-            "status": 1
-        },
-        {
-            "id": 12,
-            "date": "2017/09/21",
-            "reason": "Data science algorithms",
-            "status": 2
+          "id": 2,
+          "value": "valor 2",
+          "description": "descripcion 2"
         }
-    ]
+      ]
+    },
+    {
+      "id": 3,
+      "name": "user_email",
+      "description": "Pellentesque blandit scelerisque velit at congue. ",
+      "type": "string",
+      "sensitivity": false
+    },
+    {
+      "id": 4,
+      "name": "item_views",
+      "description": " Praesent placerat libero in felis dignissim",
+      "type": "date",
+      "sensitivity": false
+    },
+    {
+      "id": 5,
+      "name": "item_favorites",
+      "description": "Praesent malesuada, nisl eu malesuada",
+      "type": "string",
+      "sensitivity": false
+    }
+  ],
+  "requests": [
+    {
+      "id": 1,
+      "date": "2017/09/21",
+      "reason": "Data science algorithms",
+      "status": 1
+    },
+    {
+      "id": 2,
+      "date": "2017/08/13",
+      "reason": "Stakeholder dashboards",
+      "status": 2
+    },
+    {
+      "id": 3,
+      "date": "2017/07/03",
+      "reason": "Email blast",
+      "status": 3
+    },
+    {
+      "id": 4,
+      "date": "2017/02/09",
+      "reason": "Investigation",
+      "status": 2
+    },
+    {
+      "id": 5,
+      "date": "2017/09/21",
+      "reason": "Data science algorithms",
+      "status": 1
+    },
+    {
+      "id": 6,
+      "date": "2017/08/13",
+      "reason": "Stakeholder dashboards",
+      "status": 2
+    },
+    {
+      "id": 7,
+      "date": "2017/09/21",
+      "reason": "Data science algorithms",
+      "status": 3
+    },
+    {
+      "id": 8,
+      "date": "2017/09/21",
+      "reason": "Data science algorithms",
+      "status": 1
+    },
+    {
+      "id": 9,
+      "date": "2017/09/21",
+      "reason": "Data science algorithms",
+      "status": 2
+    },
+    {
+      "id": 10,
+      "date": "2017/09/21",
+      "reason": "Data science algorithms",
+      "status": 3
+    },
+    {
+      "id": 11,
+      "date": "2017/09/21",
+      "reason": "Data science algorithms",
+      "status": 1
+    },
+    {
+      "id": 12,
+      "date": "2017/09/21",
+      "reason": "Data science algorithms",
+      "status": 2
+    }
+  ]
 }
